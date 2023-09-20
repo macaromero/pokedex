@@ -29,7 +29,6 @@ const search = () => {
 // Watch
 watch(searchQuery, (newVal, oldVal) => {
 	if (newVal !== oldVal) {
-		// Agrega un retraso (por ejemplo, 300 ms) antes de realizar la búsqueda para evitar búsquedas instantáneas en cada entrada del usuario.
 		clearTimeout(searchTimeout);
 		searchTimeout = setTimeout(search, 300);
 	}
